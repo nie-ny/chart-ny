@@ -4,7 +4,10 @@
   "description": "一个简单的图表库",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "rollup -c -w",
+    "build": "rimraf -rf ./dist && cross-env NODE_ENV=production rollup -c",
+    "lint": "eslint --ext .js --ignore-path .gitignore .",
+    "lint:fix": "eslint --fix  --ext .js --ignore-path .gitignore ."
   },
   "repository": {
     "type": "git",
@@ -16,5 +19,23 @@
   "bugs": {
     "url": "https://github.com/nie-ny/chart-ny/issues"
   },
-  "homepage": "https://github.com/nie-ny/chart-ny#readme"
+  "homepage": "https://github.com/nie-ny/chart-ny#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.18.9",
+    "@babel/core": "^7.18.9",
+    "@babel/preset-env": "^7.18.9",
+    "@rollup/plugin-babel": "^5.3.1",
+    "@rollup/plugin-html": "^0.2.4",
+    "@rollup/plugin-node-resolve": "^13.3.0",
+    "cross-env": "^7.0.3",
+    "eslint": "^8.20.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "rimraf": "^3.0.2",
+    "rollup": "^2.77.0",
+    "rollup-plugin-livereload": "^2.0.5",
+    "rollup-plugin-serve": "^2.0.0"
+  }
 }
