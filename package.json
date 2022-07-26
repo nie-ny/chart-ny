@@ -7,9 +7,9 @@
     "dev": "rollup -c -w",
     "build": "rimraf -rf ./dist && cross-env NODE_ENV=production rollup -c",
     "test": "jest --coverage",
-    "test-live":"cross-env DEBUG_MODE=1 jest --coverage",
+    "test-live": "cross-env DEBUG_MODE=1 jest --coverage",
     "lint": "eslint --ext .js --ignore-path .gitignore .",
-    "lint:fix": "eslint --fix  --ext .js --ignore-path .gitignore ."
+    "lint:fix": "eslint --fix --ext .js --ignore-path .gitignore ."
   },
   "repository": {
     "type": "git",
